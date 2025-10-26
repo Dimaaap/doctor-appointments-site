@@ -11,7 +11,7 @@ const SpecialityMenu = () => {
                 Simply browse through our extensive list of trusted doctors, schedule your appointment 
                 hassle-free
             </p>
-            <div className="flex sm:justify-center gap-4 pt-5 w-full overflow-scroll">
+            <div className="flex sm:justify-center gap-4 pt-5 w-full overflow-scroll overflow-y-hidden">
                 { specialityData.map((item, index) => (
                     <Link onClick={() => scrollTo(0, 0)} className="flex flex-col items-center text-xs cursor-pointer flex-shrink-0 hover:translate-y-[-10px]
                     transition-all duration-500" 
