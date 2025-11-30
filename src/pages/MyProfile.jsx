@@ -28,6 +28,21 @@ const MyProfile = () => {
                 onChange={(e) => setUserData(prev => ({...prev, name: e.target.value}))} /> 
                 : <p>{ userData.name }</p>
             }
+
+            <hr />
+
+            <div>
+                <p>CONTACT INFORMATION</p>
+
+                <div>
+                    <p>
+                        Email id: 
+                    </p>
+                    <p>
+                        { userData.email }
+                    </p>
+                </div>
+            </div>
         </div>
     )
 }
