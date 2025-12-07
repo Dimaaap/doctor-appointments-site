@@ -18,11 +18,11 @@ const MyProfile = () => {
   const [isEdit, setIsEdit] = useState(false);
 
   return (
-    <div>
-      <img src={userData.image} alt="" />
+    <div className="max-w-lg flex flex-col gap-2 text-sm">
+      <img className="w-36 rounded" src={userData.image} alt="" />
 
       {isEdit ? (
-        <input
+        <input className="bg-gray-50 text-3xl font-medium max-w-60 mt-4"
           type="text"
           value={userData.name}
           onChange={(e) =>
@@ -30,7 +30,7 @@ const MyProfile = () => {
           }
         />
       ) : (
-        <p>{userData.name}</p>
+        <p className="font-medium text-3xl text-neutral-800 mt-4">{userData.name}</p>
       )}
 
       <hr />
@@ -111,6 +111,13 @@ const MyProfile = () => {
           value={ userData.dob } /> 
           : <p>{ userData.dob }</p> }
         </div>
+      </div>
+      <div>
+          {
+            isEdit 
+            ? <button onClick={() => setIsEdit(false)}>Save information</button> 
+            : <button onClick={() => setIsEdit(true)}>Edit</button>
+          }
       </div>
     </div>
   );
